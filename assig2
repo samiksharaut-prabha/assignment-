@@ -1,0 +1,218 @@
+# Section 1: Dictionaries
+
+
+# Q1
+student = {"name": "Samiksha", "age": 21, "course": "Python", "city": "Pune"}
+print(student)
+
+# Q2
+employee = {"name": "Rahul", "salary": 50000, "department": "IT"}
+print(employee["name"])
+print(employee["salary"])
+print(employee["department"])
+
+# Q3
+student["email"] = "sam@example.com"
+print(student)
+
+# Q4
+student["city"] = "Mumbai"
+print(student)
+
+# Q5
+student.pop("email")
+print(student)
+del student["city"]
+print(student)
+
+# Q6
+for key in student.keys():
+    print(key)
+
+for value in student.values():
+    print(value)
+
+for key, value in student.items():
+    print(key, value)
+
+# Q7
+marks = {"Math": 80, "Science": 75, "English": 85}
+print("Subjects:", len(marks))
+
+# Q8
+marks = {"Math": 80, "Science": 75, "English": 85, "History": 70, "Computer": 95}
+print("Total Marks:", sum(marks.values()))
+
+# Q9
+key = "Math"
+if key in marks:
+    print("Key Exists")
+else:
+    print("Key Not Found")
+
+# Q10
+products = {"Laptop": 50000, "Mouse": 400, "Phone": 15000, "Book": 300}
+for product, price in products.items():
+    if price > 500:
+        print(product, price)
+
+
+# Section 2: Sets
+
+
+# Q11
+numbers = {10, 20, 30, 40, 50}
+print(numbers)
+
+# Q12
+numbers.add(60)
+numbers.add(70)
+print(numbers)
+
+# Q13
+numbers.remove(20)
+numbers.discard(100)
+print(numbers)
+
+# Q14
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+print("Union:", set1 | set2)
+print("Intersection:", set1 & set2)
+print("Difference:", set1 - set2)
+
+# Q15
+print("Common Elements:", set1.intersection(set2))
+
+# Q16
+value = 3
+print(value in set1)
+
+# Q17
+lst = [1, 2, 2, 3, 4, 4, 5]
+unique_set = set(lst)
+print(unique_set)
+
+# Q18
+students = {"Asha", "Ravi", "Asha", "Kiran", "Neha"}
+print("Unique Students:", len(students))
+
+# Q19
+a = {1, 2, 3}
+b = {1, 2, 3}
+print(a == b)
+
+# Q20
+a.clear()
+print(a)
+
+
+# Section 3: Functions
+
+
+# Q21
+def welcome():
+    print("Welcome to Python Programming")
+
+welcome()
+
+# Q22
+def add(a, b):
+    print("Sum =", a + b)
+
+add(10, 20)
+
+# Q23
+def greet(name):
+    print("Hello,", name)
+
+greet("Rohit")
+
+# Q24
+def square(num):
+    return num * num
+
+print(square(5))
+
+# Q25
+def check_even_odd(num):
+    if num % 2 == 0:
+        print("Even")
+    else:
+        print("Odd")
+
+check_even_odd(7)
+
+# Q26
+def area_rectangle(length, width):
+    return length * width
+
+print(area_rectangle(5, 4))
+
+# Q27
+def greater(a, b):
+    return a if a > b else b
+
+print(greater(10, 20))
+
+# Q28
+def print_numbers():
+    for i in range(1, 11):
+        print(i)
+
+print_numbers()
+
+# Q29
+def sum_list(lst):
+    return sum(lst)
+
+print(sum_list([10, 20, 30, 40]))
+
+# Q30
+def result(marks):
+    if marks >= 35:
+        print("Pass")
+    else:
+        print("Fail")
+
+result(50)
+
+# Q31
+def student_info(name, city="Pune"):
+    print(name, city)
+
+student_info("Rahul")
+student_info("Amit", "Mumbai")
+
+# Q32
+def details(name, age):
+    print(name, age)
+
+details(age=21, name="Samiksha")
+
+# Q33
+def display_numbers(*args):
+    for num in args:
+        print(num)
+
+display_numbers(1, 2, 3, 4, 5)
+
+# Q34
+def max_min(lst):
+    return max(lst), min(lst)
+
+maximum, minimum = max_min([5, 10, 15, 20])
+print("Maximum =", maximum)
+print("Minimum =", minimum)
+
+# Q35
+def count_vowels(text):
+    vowels = "aeiouAEIOU"
+    count = 0
+    for char in text:
+        if char in vowels:
+            count += 1
+    return count
+
+print("Vowels =", count_vowels("Python Programming"))
