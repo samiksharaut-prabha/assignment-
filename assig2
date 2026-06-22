@@ -1,5 +1,3 @@
-# Section 1: Dictionaries
-
 
 # Q1
 student = {"name": "Samiksha", "age": 21, "course": "Python", "city": "Pune"}
@@ -57,7 +55,7 @@ for product, price in products.items():
         print(product, price)
 
 
-# Section 2: Sets
+
 
 
 # Q11
@@ -108,7 +106,6 @@ a.clear()
 print(a)
 
 
-# Section 3: Functions
 
 
 # Q21
